@@ -99,9 +99,11 @@ body {
 h1{
     text-align: center;
     margin: 1rem;
+    font-size: 5rem;
 }
 
 h2{
     text-align: center;
     margin: 1rem;
+    font-size: 2rem;
 }

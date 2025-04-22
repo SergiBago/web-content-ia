@@ -12,6 +12,10 @@
     height: fit-content;
 }
 
+.plan-outer-container{
+    margin: 0.5rem auto;
+}
+
 .plan-container{
     box-shadow: 4px 3px 1px 1px #f5f5f5;
     padding: 1rem 1rem 2rem 1rem;
@@ -52,7 +56,7 @@
 .plan-subscribe-button{
     height: 2.5rem;
     width: 15rem;
-    background: #eb7a46;
+    background: var(--main-color);
     color: white;
     font-size: 1.5rem;
     border-radius: 1rem;
