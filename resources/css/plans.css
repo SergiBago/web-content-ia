@@ -1,0 +1,50 @@
+.full-page-container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.planes-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.plan-header{
+    font-size: 2rem;
+    color:var(--main-color);
+    width: fit-content;
+    margin:auto;
+    text-align: center;
+}
+
+.plan-price{
+
+}
+
+.plan-price-subheader{
+
+}
+
+.plan-subscribe-button{
+
+}
+
+.plan-separator{
+
+}
+
+.plan-features-list{
+
+}
+
+.plan-feature-icon{
+
+}
+
+.plan-feature-text{
+
+}
+
