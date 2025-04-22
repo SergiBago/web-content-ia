@@ -12,6 +12,19 @@
     height: fit-content;
 }
 
+.plan-container{
+    box-shadow: 4px 3px 1px 1px #f5f5f5;
+    padding: 1rem 1rem 2rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    border: 1px solid var(--border-color);
+    max-width: 30rem;
+}
+
+.plan-container.selected{
+    background: var(--background-main-color);
+}
+
 .plan-header{
     font-size: 2rem;
     color:var(--main-color);
@@ -21,30 +34,54 @@
 }
 
 .plan-price{
-
+    font-size: 4rem;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: -1.5rem;
+    margin-top: -1rem;
 }
 
 .plan-price-subheader{
-
+    font-size: 1rem;
+    width: fit-content;
+    margin:auto;
+    text-align: center;
 }
 
 .plan-subscribe-button{
-
+    height: 2.5rem;
+    width: 15rem;
+    background: #eb7a46;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+    margin: 1.5rem auto 0rem auto;
 }
 
 .plan-separator{
-
+    height: 1px;
+    background: var(--border-color);
+    width: calc(100% - 2rem);
+    margin:0.5rem 1rem;
 }
 
 .plan-features-list{
-
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    margin: auto 1rem;
 }
 
 .plan-feature-icon{
-
+    font-size: 1rem;
+    color: var(--main-color);
 }
 
 .plan-feature-text{
-
+    text-align: left;
+    font-size: 1rem;
+    margin: auto 1rem 0.5rem 0.5rem;
 }
 

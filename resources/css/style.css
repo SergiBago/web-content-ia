@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: var(--text-color);
+    font-weight: 300;
+    font-family: "Roboto Mono", monospace;
 }
 
 body {
@@ -94,9 +97,11 @@ body {
 
 
 h1{
-
+    text-align: center;
+    margin: 1rem;
 }
 
 h2{
-
+    text-align: center;
+    margin: 1rem;
 }

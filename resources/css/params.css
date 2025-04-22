@@ -2,4 +2,7 @@
 *{
     --main-color: #E56428FF;
     --secondary-main-color: rgba(214, 118, 74, 0.98);
+    --background-main-color: rgba(214, 118, 74, 0.98);
+    --border-color: rgba(189, 189, 189, 0.98);
+    --text-color:#222;
 }
