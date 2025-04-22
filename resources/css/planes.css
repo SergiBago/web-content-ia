@@ -1,13 +1,7 @@
-.full-page-container{
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-
 .planes-list{
     display: flex;
     flex-wrap: wrap;
-    margin:auto;
+    margin: 2rem auto auto auto;
     width: fit-content;
     height: fit-content;
 }
@@ -23,10 +17,15 @@
     margin: 0.5rem;
     border: 1px solid var(--border-color);
     max-width: 30rem;
+    height: 52rem;
+    display: grid;
+    z-index: 0;
+    position: relative;
+    grid-template-rows: max-content max-content max-content max-content 1fr max-content;
 }
 
 .plan-container.selected{
-    background: var(--background-main-color);
+    background: var(--background-secondary-main-color);
 }
 
 .plan-header{
@@ -75,13 +74,19 @@
 .plan-features-list{
     display: grid;
     grid-template-columns: 1rem 1fr;
-    margin: auto 1rem;
+    margin: 0 1rem;
+    grid-template-rows: repeat(15, max-content);
 }
 
 .plan-feature-icon{
     font-size: 1rem;
-    color: var(--main-color);
+    color: var(--ok-color);
 }
+
+.plan-feature-icon.warn{
+    color: var(--warn-color);
+}
+
 
 .plan-feature-text{
     text-align: left;
@@ -89,3 +94,29 @@
     margin: auto 1rem 0.5rem 0.5rem;
 }
 
+#comparation-accordion{
+    margin:2rem;
+}
+
+.accordion-body{
+    padding: 0!important;
+}
+
+table{
+    margin: 0!important;
+}
+
+.table-header{
+
+}
+
+.table-header th{
+    background-color: var(--background-secondary-main-color)!important;
+   /* border-color: white;
+
+    */
+}
+
+.table-bordered>:not(caption)>*{
+    border-width: 0;
+}

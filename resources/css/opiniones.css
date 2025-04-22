@@ -1,0 +1,54 @@
+
+.section-title {
+   /* font-weight: 600;
+    font-size: 2rem;
+
+    */
+}
+
+.subtext {
+    font-size: 1.1rem;
+}
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--soft-border-color);
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 5px var(--shadow-color);
+    height: 8.5rem;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+.stat-number {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.stat-label{
+ height: fit-content;
+    margin: auto;
+}
+
+.testimonial-card {
+    background: white;
+    border: 1px solid var(--soft-border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px var(--shadow-color);
+}
+.quote-icon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.container{
+    margin:0.5rem 1rem;
+}
+
+.box-shadow{
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+    background-color: var(--background-white-color)!important;
+}

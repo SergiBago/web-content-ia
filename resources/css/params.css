@@ -1,8 +1,16 @@
 
 *{
     --border-color: rgba(189, 189, 189, 0.98);
+    --soft-border-color: rgba(225, 225, 225, 0.98);
+    --menu-text-color:#333;
+    --shadow-color:#f5f5f5;
     --text-color:#222;
     --main-color:#0071ce;
+    --warn-color: #ce6700;
+    --alert-color: #e71b1b;
+    --ok-color:  #21d706;
     --secondary-main-color: #90bde3;
+    --background-white-color: #f9fafb;
     --background-main-color: #bfd9ef;
+    --background-secondary-main-color: rgb(240 248 255);
 }
