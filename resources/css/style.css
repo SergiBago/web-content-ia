@@ -68,7 +68,7 @@ body {
 }
 
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero.png') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -78,14 +78,14 @@ body {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 2rem;
     border-radius: 10px;
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .section {
@@ -118,6 +118,7 @@ h1{
     text-align: center;
     margin: 1rem;
     font-size: 5rem;
+    font-weight: 300!important;
 }
 
 h2{
@@ -129,6 +130,52 @@ h2{
 
 .accordion-header{
     margin:0;
+}
+
+.section .features-list {
+    display: flex;
+    gap: 20px; /* Optional: Adds space between the cards */
+    flex-wrap: wrap; /* Ensures the cards wrap to the next line if they exceed the container's width */
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 20px); /* Adjust the width of each card to be one-third, minus the gap */
+    box-sizing: border-box; /* Ensures padding/margin doesn't affect the width */
+    margin-bottom: 20px; /* Optional: Adds space between rows */
+    border:#333 1px solid;
+    opacity: 0;  /* Initially hidden */
+    transform: translateX(100%);  /* Start off the screen */
+    transition: all 0.6s ease-out; /* Smooth transition when animated */
+}
+
+/* Animation: When the card is in view, slide it in */
+.card-visible {
+    opacity: 1;  /* Fully visible */
+    transform: translateX(0);  /* Move to the original position */
+}
+
+/* Optional: Styling for the card layout */
+.card .card-header {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.card .card-body {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.card .card-footer {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
 }
 
 
