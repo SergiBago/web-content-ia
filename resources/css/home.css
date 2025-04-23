@@ -1,0 +1,123 @@
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.icon {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+.feature-box {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.03);
+}
+
+
+.hero {
+    background: url('../images/portada.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: white;
+}
+
+.hero-container{
+    background: #333333b0;
+    width: 100% !important;
+    height: 100%;
+    margin:0;
+    text-align: center;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-rows: 1fr max-content max-content max-content 1fr;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 6rem!important;
+    font-weight: 200!important;
+    color: #eaeaea;
+    grid-row-start: 2;
+}
+
+.hero h2 {
+    font-size: 2rem!important;
+    font-weight: 300!important;
+    color: #e8e8e8;
+    margin-bottom: 2rem;
+    grid-row-start: 3;
+}
+
+.hero h3 {
+    font-size: 1.5rem!important;
+    font-weight: 300!important;
+    color: #e4e4e5;
+    grid-row-start: 4;
+}
+
+.feature-section {
+    padding: 5rem 0;
+}
+.feature-section:nth-child(even) {
+    background-color: #ffffff;
+}
+.feature-section:nth-child(odd) {
+    background-color: #f0f2f5;
+}
+.feature-title {
+    font-size: 2rem !important;
+    font-weight: 600;
+    color: var(--main-color);
+    text-align: left;
+    margin-left: 0;
+}
+
+.flex-md-row-reverse .feature-title {
+    text-align: right;
+    margin-right: 0;
+}
+
+.feature-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+    text-align: justify;
+}
+.feature-img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.container{
+    z-index: 0;
+    display: block;
+    position: relative;
+    max-width: unset !important;
+    margin: auto 4rem;
+    width: calc(100% - 6rem) !important;
+}
+
+.plans-button-container{
+    width: fit-content;
+    margin: 2rem auto 1rem auto;
+}

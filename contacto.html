@@ -49,16 +49,16 @@
       <form>
         <div class="mb-3">
           <label for="nombreCompleto" class="form-label">Nombre Completo</label>
-          <input type="text" placeholder="Jose Garcia" class="form-control" id="nombreCompleto">
+          <input type="text" placeholder="Jose Garcia" required class="form-control" id="nombreCompleto">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Dirección de email</label>
-          <input type="email" placeholder="tu_email@dominio.com" class="form-control" id="email" aria-describedby="emailHelp">
+          <input type="email" placeholder="tu_email@dominio.com" required class="form-control" id="email" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
         </div>
         <div class="mb-3">
           <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea rows="4" id="mensaje" class="form-control">
+          <textarea rows="4" id="mensaje" required class="form-control">
           </textarea>
         </div>
         <button type="button" class="btn btn-primary" id="submitBtn">¡Enviar!</button>

@@ -68,13 +68,21 @@ body {
 }
 
 .hero {
-    background: url('../images/hero.png') no-repeat center center/cover;
+    background: url('../images/portada.jpg') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    background-color: white;
+}
+
+.hero-container{
+    background: #33333370;
+    width: 100% !important;
+    height: 100%;
+    margin:0
 }
 
 .hero-content {
@@ -98,12 +106,7 @@ body {
     font-size: 2rem;
 }
 
-h3{
-    text-align: center;
-    margin: 1rem;
-    font-size: 1.75rem!important;;
-    font-weight: 300!important;
-}
+
 
 .footer {
     background-color: #111;
@@ -117,15 +120,23 @@ h3{
 h1{
     text-align: center;
     margin: 1rem;
-    font-size: 5rem;
+    font-size: 2.25rem!important;
     font-weight: 300!important;
 }
 
 h2{
     text-align: center;
     margin: 1rem;
-    font-size: 2rem!important;;
+    font-size: 1.75rem!important;;
     font-weight: 300!important;
+}
+
+h3{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.25rem!important;;
+    font-weight: 300!important;
+    color: #6c757d;
 }
 
 .accordion-header{

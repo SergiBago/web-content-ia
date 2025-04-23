@@ -17,7 +17,7 @@
     margin: 0.5rem;
     border: 1px solid var(--border-color);
     max-width: 30rem;
-    height: 52rem;
+    height: 54.5rem;
     display: grid;
     z-index: 0;
     position: relative;
@@ -76,6 +76,7 @@
     grid-template-columns: 1rem 1fr;
     margin: 0 1rem;
     grid-template-rows: repeat(15, max-content);
+    row-gap: 0.25rem;
 }
 
 .plan-feature-icon{
