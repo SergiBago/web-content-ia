@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="resources/css/params.css">
     <link rel="stylesheet" href="resources/css/home.css">
     <link rel="stylesheet" href="resources/css/scrollbar.css">
+    <link rel="stylesheet" href="resources/scss/carrousel.css">
+    <link rel="stylesheet" href="resources/css/planes.css">
+    <link rel="stylesheet" href="resources/css/contacto.css">
+    <link rel="stylesheet" href="resources/css/opiniones.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=DM+Mono:wght@300;400;500&family=Gelasio:wght@400;500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Lora:wght@400;500&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Mynerve&family=Noto+Sans+Display:wght@300;400;500&family=Old+Standard+TT:wght@400;700&family=Poiret+One&family=Red+Hat+Mono:wght@300;400;500&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500&family=Sacramento&family=Special+Elite&family=Ubuntu:wght@300;400;500&family=Vidaloka&family=Work+Sans:wght@300;400;500&family=Yantramanav:wght@300;400;500&display=swap" rel="stylesheet">
@@ -24,19 +28,16 @@
             </div>
             <div id="navigation-menu-buttons" class="d-flex">
                 <div class="navigation-menu-button selected">
-                    <label style="white-space: nowrap;" ><a href="index.html">Inicio</a></label>
+                    <label style="white-space: nowrap;" ><a href="#features">Inicio</a></label>
                 </div>
                 <div class="navigation-menu-button">
-                    <label style="white-space: nowrap;" ><a href="sobre-nosotros.html">Sobre Nosotros</a></label>
+                    <label style="white-space: nowrap;" ><a href="#planes">Planes</a></label>
                 </div>
                 <div class="navigation-menu-button">
-                    <label style="white-space: nowrap;" ><a href="planes.html">Planes</a></label>
+                    <label style="white-space: nowrap;" ><a href="#opiniones">Opiniones</a></label>
                 </div>
                 <div class="navigation-menu-button">
-                    <label style="white-space: nowrap;" ><a href="opiniones.html">Opiniones</a></label>
-                </div>
-                <div class="navigation-menu-button">
-                    <label style="white-space: nowrap;" ><a href="contacto.html">Contacto</a></label>
+                    <label style="white-space: nowrap;" ><a href="#contacto">Contacto</a></label>
                 </div>
             </div>
         </div>
@@ -51,205 +52,144 @@
         </div>
     </section>
 
-    <!-- Funcionalidad 1 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Generación automática de contenido multimedia</h2>
-                    <p class="feature-text">
-                        Crea imágenes, vídeos y textos optimizados para redes sociales en segundos. Gracias a nuestra IA avanzada, olvídate de las herramientas complejas: simplemente describe lo que quieres y ContentIA lo crea por ti.
-                    </p>
-                    <p class="feature-text">
-                        Videos que impactan. Imágenes que cuentan historias. Textos que conectan con tu audiencia. Todo desde un solo clic.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/automaticContent.jpg" alt="Generación de contenido" class="feature-img">
+
+    <section class="features-section" id="features">
+        <h2 class="features-header">Descubre ContentAI.</h2>
+        <div class="features-container">
+            <div class="feature-card" onclick="openFeatureModal(1)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/automaticContent.jpg">
+                    </div>
+                    <div class="feature-title dark">Contenido automático</div>
+                    <div class="feature-subtitle dark">Imágenes, vídeos y textos en segundos.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
                 </div>
             </div>
+
+            <div class="feature-card" onclick="openFeatureModal(2)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/brandIdentity.jpg">
+                    </div>
+                    <div class="feature-title dark">Identidad de marca</div>
+                    <div class="feature-subtitle dark">Contenido con tus colores y estilo.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+           <!-- <div class="feature-card" onclick="openFeatureModal(3)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/persuasive.jpg">
+                    </div>
+                    <div class="feature-title dark">Textos y voz IA</div>
+                    <div class="feature-subtitle dark">Copywriting y locuciones realistas.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="feature-card" onclick="openFeatureModal(4)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/timer.jpg">
+                    </div>
+                    <div class="feature-title dark">Publicación inteligente</div>
+                    <div class="feature-subtitle dark">Publica en el mejor momento sin esfuerzo.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(5)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/optimization.jpg">
+                    </div>
+                    <div class="feature-title dark">Contenido viral</div>
+                    <div class="feature-subtitle dark">Aprovecha tendencias en tiempo real.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(6)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/edit.jpg">
+                    </div>
+                    <div class="feature-title">Edición automática</div>
+                    <div class="feature-subtitle">Vídeos editados con IA en segundos.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(7)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/performance.jpg">
+                    </div>
+                    <div class="feature-title dark">Análisis con IA</div>
+                    <div class="feature-subtitle dark">Evalúa y mejora tus resultados.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(8)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/advertisment.jpg">
+                    </div>
+                    <div class="feature-title">Anuncios efectivos</div>
+                    <div class="feature-subtitle">Publicidad optimizada por IA.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(9)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/script.jpg">
+                    </div>
+                    <div class="feature-title">Guiones automáticos</div>
+                    <div class="feature-subtitle">Estructura tus ideas con IA.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card" onclick="openFeatureModal(10)">
+                <div class="feature-card-content">
+                    <div class="image-container">
+                        <img class="feature-background" src="resources/images/apis.jpg">
+                    </div>
+                    <div class="feature-title">Integración total</div>
+                    <div class="feature-subtitle">Conecta todas tus plataformas.</div>
+                    <div class="expand-button" >
+                        <i class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Funcionalidad 2 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 flex-md-row-reverse">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Personalización basada en identidad de marca</h2>
-                    <p class="feature-text">
-                        Tu marca tiene una voz, un estilo, una esencia. ContentIA lo sabe. Por eso cada contenido se adapta automáticamente a tu paleta de colores, tipografía y tono de comunicación.
-                    </p>
-                    <p class="feature-text">
-                        Da igual si estás en moda o tecnología: tus publicaciones mantendrán siempre una coherencia visual que refuerza tu identidad y te hace inconfundible.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/brandIdentity.jpg" alt="Identidad de marca" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Funcionalidad 3 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Textos persuasivos y locuciones realistas</h2>
-                    <p class="feature-text">
-                        El copy vende. Y ContentIA escribe por ti. Nuestra IA genera textos con técnicas de persuasión y storytelling adaptadas a cada objetivo, desde engagement hasta conversión.
-                    </p>
-                    <p class="feature-text">
-                        Además, puedes transformar ese texto en una voz humana, clara y profesional, lista para tus anuncios, reels o podcasts.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/persuasive.jpg" alt="Locuciones con IA" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 4 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 flex-md-row-reverse">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Programación y publicación inteligente</h2>
-                    <p class="feature-text">
-                        El algoritmo de ContentIA analiza el comportamiento de tu audiencia y programa automáticamente tus publicaciones en la hora exacta y formato ideal para maximizar visibilidad y engagement.
-                    </p>
-                    <p class="feature-text">
-                        Olvídate de calcular cuándo publicar. Nosotros lo hacemos por ti. Tú solo aprueba el contenido y relájate.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/timer.jpg" alt="Programación inteligente" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 5 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 ">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Optimización basada en tendencias virales</h2>
-                    <p class="feature-text">
-                        ContentIA rastrea en tiempo real lo que es tendencia en redes sociales. Ajustamos automáticamente tu contenido para que hable el mismo lenguaje que tu audiencia, en el momento justo.
-                    </p>
-                    <p class="feature-text">
-                        ¿Una canción viral? ¿Un meme del momento? Tu marca también puede estar ahí... y destacar.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/optimization.jpg" alt="Tendencias virales" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 6 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 flex-md-row-reverse">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Edición automática de vídeos y reels</h2>
-                    <p class="feature-text">
-                        ¿Tomas largas? ¿Material sin editar? Con ContentIA puedes crear vídeos listos para publicar sin necesidad de software ni experiencia. Cortes automáticos, efectos dinámicos y música sincronizada con IA.
-                    </p>
-                    <p class="feature-text">
-                        El vídeo que hubieras tardado horas en montar, ahora lo tienes en segundos. ¡Y se ve increíble!
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/edit.jpg" alt="Edición automática de vídeos" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 7 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 ">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Análisis de rendimiento con IA</h2>
-                    <p class="feature-text">
-                        Lo que no se mide, no se mejora. Por eso ContentIA analiza cada publicación y te muestra qué funciona mejor. Pero vamos más allá: ajustamos automáticamente tu estrategia según esos datos.
-                    </p>
-                    <p class="feature-text">
-                        Resultados claros. Mejoras automáticas. Menos ensayo-error, más impacto.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/performance.jpg" alt="Análisis con IA" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 8 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 flex-md-row-reverse">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Generación de anuncios publicitarios efectivos</h2>
-                    <p class="feature-text">
-                        ¿Publicidad que convierte? La IA de ContentIA diseña anuncios perfectos para Meta, Google y TikTok Ads, con textos optimizados, imágenes llamativas y CTA afiladas.
-                    </p>
-                    <p class="feature-text">
-                        Publica como una agencia... sin pagar una agencia.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/advertisment.jpg" alt="Publicidad efectiva" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 9 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Generación de guiones para vídeos y podcasts</h2>
-                    <p class="feature-text">
-                        ¿Tienes una idea pero no sabes cómo estructurarla? ContentIA genera guiones con introducción, desarrollo y llamada a la acción. Perfectos para vídeos, reels, stories o podcasts.
-                    </p>
-                    <p class="feature-text">
-                        Que tu mensaje suene claro, natural y convincente desde la primera palabra.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/script.jpg" alt="Guiones con IA" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Funcionalidad 10 -->
-    <section class="feature-section">
-        <div class="container">
-            <div class="row align-items-center g-5 flex-md-row-reverse">
-                <div class="col-md-6">
-                    <h2 class="feature-title">Integración con múltiples plataformas y APIs</h2>
-                    <p class="feature-text">
-                        ContentIA se conecta con Instagram, TikTok, Facebook, LinkedIn y muchas más, permitiéndote gestionar toda tu estrategia digital desde un solo lugar. También ofrecemos API para automatizar tareas.
-                    </p>
-                    <p class="feature-text">
-                        Una herramienta. Todos tus canales. Máxima eficiencia.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="resources/images/apis.jpg" alt="Integración multiplataforma" class="feature-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Ventajas competitivas -->
     <section class="py-5 bg-light">
@@ -296,13 +236,831 @@
     </section>
 
 
-    <section class="py-5 bg-light" style="padding-bottom: 1rem">
-        <div class="container">
-            <h2 class="section-title text-center">¿Estás listo para llevar tu marca al siguiente nivel?</h2>
-            <p class="text-center mt-3">ContentIA es la herramienta esencial para crear contenido digital profesional de forma automatizada, dirigida a quienes buscan <strong>eficiencia</strong> sin sacrificar <strong>calidad</strong>.</p>
-            <div class="plans-button-container">
-                <div class="background-fadding-button " onclick="window.location.href='planes.html'">Ver planes y empezar</div>
+
+    <!-- Modal 1: Contenido automático -->
+    <div id="feature-modal-1" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content" >
+            <div class="modal-body">
+                <h2 class="modal-title">Contenido automático</h2>
+                <p class="modal-subtitle">Tus ideas, convertidas en contenido listo para publicar.</p>
+                <div class="modal-text-container">
+                    <p class="modal-text">
+                        ContentIA transforma una simple instrucción en una pieza de contenido completa. ¿Quieres una imagen impactante, un post con gancho o un vídeo dinámico? Solo descríbelo. Nuestra IA comprende el propósito, el formato y el público objetivo, y genera el contenido que necesitas en segundos.
+                    </p>
+                    <p class="modal-text">
+                        El proceso tradicional de creación requiere múltiples herramientas, diseñadores, redactores y editores. Con ContentIA, todo eso se reduce a un solo clic. Obtén resultados profesionales sin esfuerzo, con la seguridad de que cada pieza está optimizada para redes sociales y audiencias digitales.
+                    </p>
+                    <p class="modal-text">
+                        Porque la creatividad no debería ser un cuello de botella. ContentIA libera tu tiempo y multiplica tu capacidad de generar contenido atractivo, alineado con tu estrategia y adaptado a cada canal. La única limitación es tu imaginación.
+                    </p>
+                </div>
+                <div id="slideshow-container-1">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto4.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Identidad de marca -->
+    <div id="feature-modal-2" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Identidad de marca</h2>
+                <p class="modal-subtitle">Tu esencia, automatizada.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    En un mercado saturado, tu marca debe destacar por su coherencia y personalidad. ContentIA aprende tu paleta de colores, tus tipografías y tu tono de voz para generar contenido que respire tu esencia en cada publicación.
+                </p>
+                <p class="modal-text">
+                    Olvídate de revisar estilos y manuales de marca: nuestra IA aplica de forma automática tus directrices, garantizando que cada post, gráfica y vídeo sea inconfundiblemente tuyo. Sin esfuerzo, sin fallos humanos.
+                </p>
+                <p class="modal-text">
+                    El resultado es una identidad sólida y reconocible al instante, capaz de fortalecer la confianza de tu audiencia y reforzar tu posicionamiento. Tu marca, diseñada y difundida con la precisión de un artesano digital.
+                </p>
+                </div>
+
+                <div id="slideshow-container-2">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/identidad-marca1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/identidad-marca2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/indentidad-marca3.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Textos y voz IA -->
+    <!--<div id="feature-modal-3" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Textos y voz IA</h2>
+                <p class="modal-subtitle">Copywriting y locución sin límites.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Cada palabra cuenta. Nuestra IA domina técnicas de persuasión y storytelling para generar textos que atrapan al lector y le invitan a actuar. Desde titulares magnéticos hasta descripciones que venden.
+                </p>
+                <p class="modal-text">
+                    Transforma tus textos en voz humana de alta fidelidad: ajustes de tono, velocidad y énfasis pensados para impactar en podcasts, vídeos y anuncios de audio. Una locución profesional al alcance de un clic.
+                </p>
+                <p class="modal-text">
+                    Combina copy y voz en un solo flujo de trabajo: redacta, edita y produce tu mensaje completo sin salir de ContentIA. Ahorra tiempo, elimina costes y eleva el nivel de tu comunicación.
+                </p>
+                </div>
+
+                <div id="slideshow-container-3">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/guion1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/guio2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/guio3.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Modal 4: Publicación inteligente -->
+    <div id="feature-modal-4" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Publicación inteligente</h2>
+                <p class="modal-subtitle">El timing perfecto, siempre.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    No basta con crear gran contenido; hay que publicarlo en el momento justo. ContentIA analiza la actividad de tu audiencia y selecciona la franja horaria que maximiza visibilidad y engagement.
+                </p>
+                <p class="modal-text">
+                    Programa automáticamente tus posts en redes sociales, blogs y newsletters. Olvídate de calendarios manuales: nuestra IA sincroniza múltiples plataformas y ajusta los horarios según rendimiento en tiempo real.
+                </p>
+                <p class="modal-text">
+                    Gana consistencia y relevancia sin esfuerzo: mientras tú te centras en la estrategia, ContentIA firma cada publicación en la ventana de mayor impacto. Publicar deja de ser una tarea y se convierte en tu ventaja competitiva.
+                </p>
+                </div>
+
+                <div id="slideshow-container-4">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/programacio1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/programacio2.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/programacio3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/programacio4.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/programacio5.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/programacio6.png" style="width:100%">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Contenido viral -->
+    <div id="feature-modal-5" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Contenido viral</h2>
+                <p class="modal-subtitle">A la vanguardia de las tendencias.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Cada día nacen nuevas tendencias. ContentIA monitoriza hashtags, memes y formatos emergentes para adaptar tu contenido al pulso de las redes sociales en tiempo real.
+                </p>
+                <p class="modal-text">
+                    Nuestra IA reestructura tus mensajes y creatividades para que encajen con el mood viral del momento: estilo visual, lenguaje coloquial y referencias culturales se combinan para captar la atención.
+                </p>
+                <p class="modal-text">
+                    Sube al tren de lo viral sin perder identidad de marca. Con ContentIA, no solo sigues tendencias: las lideras, creando contenido que tus seguidores quieren compartir y que acelera tu alcance orgánico.
+                </p>
+                </div>
+
+                <div id="slideshow-container-5">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/tendencias1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/tendencias2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/tendencias3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/tendencias4.png" style="width:100%">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Edición automática -->
+    <div id="feature-modal-6" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Edición automática</h2>
+                <p class="modal-subtitle">Vídeos listos para triunfar.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Sube tu metraje sin montarlo. ContentIA detecta los mejores momentos, selecciona planos y aplica transiciones fluidas para crear un vídeo profesional en segundos.
+                </p>
+                <p class="modal-text">
+                    Añade títulos animados, filtros y música adaptativa con un solo clic. Cada elemento se sincroniza automáticamente para conseguir un ritmo narrativo que enganche desde el primer segundo.
+                </p>
+                <p class="modal-text">
+                    Ahorra horas de edición y costes de postproducción. Lo que antes requería un estudio completo, ahora ocurre en tu navegador: rápido, sencillo y con calidad de primera.
+                </p>
+                </div>
+
+                <div id="slideshow-container-6">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/edicio1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/edicio2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/edicio3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/edicio4.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: Análisis con IA -->
+    <div id="feature-modal-7" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Análisis con IA</h2>
+                <p class="modal-subtitle">Mide. Comprende. Mejora.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Cada publicación genera datos valiosos: impresiones, clics, tiempo de visualización y más. ContentIA organiza toda esa información en dashboards intuitivos.
+                </p>
+                <p class="modal-text">
+                    Nuestra IA detecta patrones de éxito y te sugiere ajustes automáticos: modifica titulares, cambia formatos o refuerza mensajes para optimizar resultados sin pruebas y errores manuales.
+                </p>
+                <p class="modal-text">
+                    Con un sistema de mejora continua automatizado, conviertes el análisis en acción. Despídete de los informes estáticos y da la bienvenida a decisiones basadas en inteligencia real.
+                </p>
+                </div>
+
+                <div id="slideshow-container-7">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/analisis1.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8: Anuncios efectivos -->
+    <div id="feature-modal-8" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Anuncios efectivos</h2>
+                <p class="modal-subtitle">Campañas que convierten.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Olvídate de configurar cada plataforma: ContentIA genera anuncios optimizados para Meta, Google Ads, TikTok y más, con el copy perfecto, creatividades impactantes y llamadas a la acción irresistibles.
+                </p>
+                <p class="modal-text">
+                    Nuestro algoritmo testa múltiples versiones en paralelo, eligiendo la combinación de imagen, texto y público que maximiza tu ROI. Sin gestionar campañas manualmente, sin perder presupuesto.
+                </p>
+                <p class="modal-text">
+                    Obtén resultados de agencia con un coste de fracción. Potencia tu inversión publicitaria con la precisión de una IA entrenada en millones de interacciones.
+                </p>
+                </div>
+
+                <div id="slideshow-container-8">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto3.png" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="resources/images/content-auto4.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9: Guiones automáticos -->
+    <div id="feature-modal-9" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Guiones automáticos</h2>
+                <p class="modal-subtitle">Tu historia, perfectamente estructurada.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    ¿Tienes una idea pero no sabes cómo contarlo? ContentIA transforma instrucciones y notas en guiones listos para grabar. Define tono, duración y formato, y recibe un guion completo en segundos.
+                </p>
+                <p class="modal-text">
+                    Cada guion incluye introducción, desarrollo y cierre optimizados para mantener la atención de tu audiencia. Además, adaptamos el ritmo y el vocabulario al canal: vídeos de YouTube, stories de Instagram o podcasts.
+                </p>
+                <p class="modal-text">
+                    Libera tu creatividad y reduce la planificación a un paso: escribe tu concepto y deja que la IA escriba por ti. Producción ágil, mensajes claros y una narrativa profesional sin esfuerzo.
+                </p>
+
+                </div>
+
+                <div id="slideshow-container-9">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/guion1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/guio2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/guio3.png" style="width:100%">
+                        </div>
+
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10: Integración total -->
+    <div id="feature-modal-10" class="feature-modal hidden">
+        <div class="modal-backdrop" onclick="closeFeatureModal(event)"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="modal-title">Integración total</h2>
+                <p class="modal-subtitle">Tu ecosistema, conectado.</p>
+
+                <div class="modal-text-container">
+                <p class="modal-text">
+                    Gestiona tus publicaciones en Instagram, TikTok, Facebook, LinkedIn y más desde un solo panel de control. ContentIA unifica cada plataforma para que crees y programes sin salir de la herramienta.
+                </p>
+                <p class="modal-text">
+                    ¿Necesitas mayor automatización? Accede a nuestras APIs para conectar ContentIA con tu CRM, herramienta de analítica o pipeline de marketing. Cada integración es tan sencilla como un endpoint.
+                </p>
+                <p class="modal-text">
+                    Olvídate de saltar entre aplicaciones y credenciales: con nuestra integración total, tu equipo se centra en la estrategia, mientras la IA se encarga de ejecutar y escalar tus campañas.
+                </p>
+
+                </div>
+
+                <div id="slideshow-container-10">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="resources/images/integracio1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="resources/images/integracio2.png" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- PLANES -->
+    <section class="py-5 bg-light" id="planes">
+        <h1>Planes</h1>
+        <h2>Encuentra el plan que mejor se adapte a tu empresa</h2>
+
+        <div class="planes-list">
+            <!-- Plan Básico -->
+            <div class="plan-outer-container">
+                <div class="plan-container">
+                    <div class="plan-header">Plan Básico</div>
+                    <div class="plan-price">99€</div>
+                    <div class="plan-price-subheader">Cada mes</div>
+                    <div class="plan-separator"></div>
+                    <div class="plan-features-list">
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Generación automatizada de contenido multimedia (hasta 5 contenidos/mes)</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Creación de textos persuasivos y locuciones realistas (hasta 3 textos/día)</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Programación y publicación inteligente (hasta 3 publicaciones programadas/mes)</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Integración con Instagram y Facebook</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Soporte por correo (respuesta en 48h)</div>
+
+                        <i class="bi bi-check-circle plan-feature-icon warn"></i>
+                        <div class="plan-feature-text">Marca de agua en los contenidos generados</div>
+                        <i class="bi bi-x-circle plan-feature-icon warn"></i>
+                        <div class="plan-feature-text">Sin optimización por tendencias virales</div>
+                        <i class="bi bi-x-circle plan-feature-icon warn"></i>
+                        <div class="plan-feature-text">Sin acceso a análisis avanzado</div>
+                    </div>
+                    <div class="background-fadding-button" onclick="window.location.href='#contacto'">¡Elegir!</div>
+                </div>
+            </div>
+
+            <!-- Plan Pro -->
+            <div class="plan-outer-container">
+                <div class="plan-container selected">
+                    <div class="plan-header">Plan Pro</div>
+                    <div class="plan-price">499€</div>
+                    <div class="plan-price-subheader">Cada mes</div>
+                    <div class="plan-separator"></div>
+                    <div class="plan-features-list">
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Todo lo del Plan Básico</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Personalización según identidad de marca (colores, tipografía, tono)</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Optimización basada en tendencias virales</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Edición automática de vídeos y reels</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Análisis de rendimiento con IA</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Generación de anuncios publicitarios efectivos</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Generación de guiones para vídeos y podcasts</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Integración con Instagram, TikTok, Facebook y LinkedIn</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Exportación a PDF, Word, HTML y MP4</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Soporte prioritario (respuesta en 24h)</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Sin publicidad ni marca de agua</div>
+
+                        <i class="bi bi-x-circle plan-feature-icon warn"></i>
+                        <div class="plan-feature-text">Sin acceso a generación masiva ilimitada</div>
+                        <i class="bi bi-x-circle plan-feature-icon warn"></i>
+                        <div class="plan-feature-text">Sin API personalizada</div>
+                    </div>
+                    <div class="background-fadding-button" onclick="window.location.href='#contacto'">¡Elegir!</div>
+                </div>
+            </div>
+
+            <!-- Plan Enterprise -->
+            <div class="plan-outer-container">
+                <div class="plan-container">
+                    <div class="plan-header">Plan Enterprise</div>
+                    <div class="plan-price">799€</div>
+                    <div class="plan-price-subheader">Cada mes</div>
+                    <div class="plan-separator"></div>
+                    <div class="plan-features-list">
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Todo lo del Plan Pro</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Generación ilimitada de contenido</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Creación ilimitada de textos persuasivos y locuciones</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Publicación inteligente con recomendaciones avanzadas</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Optimización automática según audiencia</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Edición de vídeos con personalización avanzada</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Análisis avanzado con informes detallados</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Anuncios optimizados con IA avanzada</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Generación de guiones adaptados a tu estrategia</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Integración API completa para automatización total</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Consultoría mensual con experto en marketing digital</div>
+                        <i class="bi bi-check-circle plan-feature-icon"></i>
+                        <div class="plan-feature-text">Soporte en tiempo real 24/7</div>
+                    </div>
+                    <div class="background-fadding-button" onclick="window.location.href='#contacto'">¡Elegir!</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acordeon comparacion -->
+        <div class="comparation-div">
+            <div class="accordion" id="comparation-accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            COMPARA LOS PLANES
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#comparation-accordion">
+                        <div class="accordion-body">
+                            <table class="table table-bordered table-striped text-center align-middle">
+                                <thead class="table-header">
+                                <tr>
+                                    <th><strong>Funcionalidades</strong></th>
+                                    <th><strong>Plan Básico</strong><br><span class="text-muted">99€/mes</span></th>
+                                    <th><strong>Plan Pro</strong><br><span class="text-muted">499€/mes</span></th>
+                                    <th><strong>Plan Enterprise</strong><br><span class="text-muted">799€/mes</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Generación automática de contenido multimedia</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Hasta 5/mes</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Hasta 15/mes</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Ilimitado</td>
+                                </tr>
+                                <tr>
+                                    <td>Textos persuasivos y locuciones realistas</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Hasta 3/día</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Hasta 10/día</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Ilimitado</td>
+                                </tr>
+                                <tr>
+                                    <td>Publicación inteligente</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Hasta 3 programadas/mes</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Ilimitadas</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Ilimitadas + Recomendaciones avanzadas</td>
+                                </tr>
+                                <tr>
+                                    <td>Optimización por tendencias virales</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Análisis de rendimiento con IA</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Análisis básico</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Con informes detallados</td>
+                                </tr>
+                                <tr>
+                                    <td>Edición de vídeos y reels</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Automática</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Automática + Personalización avanzada</td>
+                                </tr>
+                                <tr>
+                                    <td>Generación de anuncios publicitarios</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Efectivos</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Con IA + avanzada</td>
+                                </tr>
+                                <tr>
+                                    <td>Guiones para vídeos y podcasts</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Básicos</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Adaptados a tu estrategia</td>
+                                </tr>
+                                <tr>
+                                    <td>Integración con plataformas</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Instagram y Facebook</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Instagram, Facebook, TikTok y LinkedIn</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Instagram, Facebook, TikTok y LinkedIn + API completa</td>
+                                </tr>
+                                <tr>
+                                    <td>Exportación a múltiples formatos</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> PDF, Word, HTML, MP4</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Todos</td>
+                                </tr>
+                                <tr>
+                                    <td>Sin marca de agua</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon warn"></i> Incluida</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon"></i></td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Soporte</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Correo (48h)</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Prioritario (24h)</td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Tiempo real 24/7</td>
+                                </tr>
+                                <tr>
+                                    <td>Consultoría mensual</td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-x-circle plan-feature-icon warn"></i></td>
+                                    <td><i class="bi bi-check-circle plan-feature-icon"></i> Con experto en marketing</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Opiniones -->
+    <section class="py-5" id="opiniones">
+
+        <h1>Opiniones</h1>
+        <h2>Descubre lo que los usuarios dicen de ContentAI</h2>
+
+        <!-- Sección 1: Estadísticas -->
+            <div class="container">
+                <h2 class="section-title mb-3">Más de 1000 empresas confían en ContentAI</h2>
+                <p class="subtext mb-5">Automatiza, escala y personaliza tu contenido con la confianza de miles de negocios.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">+200%</div>
+                            <div class="stat-label">Aumento medio de productividad</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Renuevan su suscripción</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number">4.9/5</div>
+                            <div class="stat-label">Valoración media de satisfacción</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Sección 2: Opiniones -->
+            <div class="container">
+                <h2 class="section-title text-center mb-5" style="margin:3rem auto 2rem auto!important">Opiniones de nuestros clientes</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>ContentAI transformó nuestro flujo de trabajo. Creamos contenido de calidad en la mitad de tiempo.</p>
+                            <p class="fw-bold mb-0">Laura G. – Agencia Creativa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>La automatización de vídeos y su integración con redes sociales nos ha ahorrado horas de trabajo semanal.</p>
+                            <p class="fw-bold mb-0">David R. – Startup Tech</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>Pasamos de publicar 1 vez a la semana a 5 veces, sin perder calidad ni coherencia de marca.</p>
+                            <p class="fw-bold mb-0">María S. – E-commerce de moda</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>El plan Enterprise nos da recomendaciones estratégicas y soporte en tiempo real. Un antes y después.</p>
+                            <p class="fw-bold mb-0">Andrés M. – Empresa global</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>Gracias a ContentAI, ahora podemos lanzar campañas en múltiples idiomas sin esfuerzo extra.</p>
+                            <p class="fw-bold mb-0">Clara P. – Agencia Internacional</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card h-100">
+                            <i class="bi bi-quote quote-icon"></i>
+                            <p>Las estadísticas de rendimiento con IA nos ayudan a saber exactamente qué funciona. Increíble herramienta.</p>
+                            <p class="fw-bold mb-0">Tomás V. – Consultor Estratégico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="py-5 bg-light" id="contacto">
+        <div class="contact-div" >
+            <h1>Contacto</h1>
+            <h2>Contacta con un especialista </h2>
+
+            <form>
+                <div class="mb-3">
+                    <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                    <input type="text" placeholder="Jose Garcia" required class="form-control" id="nombreCompleto">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Dirección de email</label>
+                    <input type="email" placeholder="tu_email@dominio.com" required class="form-control" id="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea rows="4" id="mensaje" required class="form-control">
+          </textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="submitBtn">¡Enviar!</button>
+                <div class="success-message d-none">
+                    <i class="bi bi-check-circle"></i>
+                    <p>¡Mensaje enviado con exito!</p>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -341,7 +1099,95 @@
                 });
             });
         });
-    </script>
+
+        document
+            .querySelector('.modal-content')
+            .addEventListener('click', function(e){
+                e.stopPropagation();
+            });
+
+        function closeFeatureModal(event) {
+            if(event.target.classList.contains('modal-backdrop')){
+                event.target.parentElement.classList.add("hidden");
+                stopCarousel()
+            }
+        }
+        function openFeatureModal(id) {
+            document.getElementById(`feature-modal-${id}`).classList.remove("hidden");
+            startCarousel(id);
+        }
+
+        let carouselInterval;
+        let slideIndex = 0;
+        let slides = [];
+        let dots = [];
+
+        // Inicia el carrusel para el modal con identificador `id`
+        function startCarousel(id, delay = 2000) {
+            stopCarousel();  // Si ya había uno activo, lo detenemos
+
+            // Selecciona slides y dots dentro de #mySlides-{id}
+            slides = Array.from(document.querySelectorAll(`#slideshow-container-${id} .mySlides`));
+            dots   = Array.from(document.querySelectorAll(`#slideshow-container-${id} .dot`));
+            if (!slides.length || !dots.length) return;
+
+            slideIndex = 0;
+            showSlide(slideIndex);
+
+            // Arranca el interval que rota automáticamente
+            carouselInterval = setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }, delay);
+        }
+
+        // Detiene el carrusel actual
+        function stopCarousel() {
+            clearInterval(carouselInterval);
+            slides.forEach(s => s.style.display = 'none');
+            dots.forEach(d => d.classList.remove('active'));
+        }
+
+        // Muestra el slide `idx` y marca el dot correspondiente
+        function showSlide(idx) {
+            slides.forEach(s => s.style.display = 'none');
+            dots.forEach(d => d.classList.remove('active'));
+
+            slides[idx].style.display = 'block';
+            dots[idx].classList.add('active');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".navigation-menu-button a");
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Desactivar todas
+                        navLinks.forEach(link => link.parentElement.parentElement.classList.remove("selected"));
+                        // Activar la correspondiente
+                        const id = entry.target.getAttribute("id");
+                        const activeLink = document.querySelector(`.navigation-menu-button a[href="#${id}"]`);
+                        activeLink.parentElement.parentElement.classList.add("selected");
+                    }
+                });
+            }, {
+                rootMargin: "-50% 0px -50% 0px"  // cuando la sección está en el centro
+            });
+
+            sections.forEach(sec => io.observe(sec));
+        });
+
+
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            document.querySelector('.success-message').classList.remove('d-none');
+        });
+
+            </script>
+
+    <!-- Bootstrap JS Bundle con Popper incluido -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>
