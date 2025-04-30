@@ -247,6 +247,7 @@ h3{
 .header-logo{
    display: flex;
     column-gap: 0.75rem;
+    cursor: pointer;
 }
 
 .header-logo-text{
